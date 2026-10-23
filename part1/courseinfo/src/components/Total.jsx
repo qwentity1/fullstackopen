@@ -1,3 +1,4 @@
-export function Total({ exercises1, exercises2, exercises3 }) {
-  return <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+export function Total({ parts }) {
+  const totalExercises = parts.reduce((prev, acc) => prev + acc.exercises, 0)
+  return <p>Number of exercises {totalExercises}</p>
 }

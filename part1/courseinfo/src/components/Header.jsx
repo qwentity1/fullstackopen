@@ -1,3 +1,3 @@
-export function Header({ course }) {
-  return <h1>{course}</h1>
+export function Header({ courseName }) {
+  return <h1>{courseName}</h1>
 }

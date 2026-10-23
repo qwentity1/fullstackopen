@@ -1,18 +1,11 @@
 import { Part } from './Part'
 
-export function Content({
-  part1,
-  part2,
-  part3,
-  exercises1,
-  exercises2,
-  exercises3,
-}) {
+export function Content({ parts }) {
   return (
     <>
-      <Part part={part1} exercises={exercises1} />
-      <Part part={part2} exercises={exercises2} />
-      <Part part={part3} exercises={exercises3} />
+      {parts.map((part) => (
+        <Part key={part.name} name={part.name} exercises={part.exercises} />
+      ))}
     </>
   )
 }
